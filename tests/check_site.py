@@ -24,7 +24,7 @@ class SiteParser(HTMLParser):
         if attrs.get("id"):
             self.ids.add(attrs["id"])
         if tag == "a" and attrs.get("href", "").startswith("#"):
-            self.links.append(attrs["href"][1:])
+            self.links.append(attrs["href"][1:]) if attrs["href"][1:] else None
 
 parser = SiteParser()
 parser.feed(html)
