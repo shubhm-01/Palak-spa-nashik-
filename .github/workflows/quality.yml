@@ -1,0 +1,27 @@
+name: Website quality checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-site-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML structure and website essentials
+        run: python3 tests/check_site.py
+      - name: Validate inline JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import re
+          html = Path("index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script>(.*?)</script>", html, re.S)
+          Path("/tmp/site-inline.js").write_text("\n".join(scripts), encoding="utf-8")
+          PY
+          node --check /tmp/site-inline.js
