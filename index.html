@@ -40,6 +40,64 @@
 .video-link-card strong{display:block;color:var(--forest);margin-bottom:5px}
 .video-link-card span{font-size:.8rem;color:var(--muted)}
 @media(max-width:700px){.ritual-grid{grid-template-columns:1fr}.ritual-card img{height:245px}.video-links{grid-template-columns:1fr}.video-link-card{grid-template-columns:112px 1fr;gap:13px;padding:11px}.video-link-card img{width:112px;height:100px}}
+
+/* Compact one-page layout: keep the essentials, reduce long scrolling */
+section{padding:64px 0}
+.topbar{padding:7px 0}
+.nav{height:72px}
+.hero{min-height:550px}
+.hero-content{padding:72px 0 78px}
+.trust-grid{padding:16px 0;gap:14px}
+.intro-grid,.experience-grid{gap:46px}
+.intro-visual img{height:390px}
+.service-grid{gap:16px}
+.service-image{height:175px}
+.service-body{padding:18px}
+.experience-image img{height:390px}
+.experience-list{gap:17px;margin:20px 0}
+.experience-row{padding-bottom:15px}
+.price-row{padding:14px 0}
+.home-ritual{padding:58px 0}
+#home-spa .section-head{margin-bottom:25px}
+.ritual-grid{gap:14px}
+.ritual-card img{height:165px}
+.ritual-card-body{padding:16px}
+.ritual-card-body h3{font-size:1.22rem}
+.ritual-card-body p{font-size:.84rem;margin-bottom:7px}
+.photo-credit{font-size:.68rem}
+.video-links{display:none!important}
+.gallery{padding:58px 0}
+.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:170px;gap:12px}
+.gallery-grid img:first-child,.gallery-grid img:last-child{grid-row:auto;grid-column:auto}
+.booking-form{padding:25px}
+.map-card iframe{height:190px}
+.footer{padding:45px 0 22px}
+@media(max-width:900px){
+  section{padding:56px 0}
+  .hero{min-height:530px}
+  .intro-visual img,.experience-image img{height:340px}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:150px 150px}
+}
+@media(max-width:700px){
+  section{padding:48px 0}
+  .nav{height:68px}
+  .navlinks{top:68px}
+  .hero{min-height:540px}
+  .hero-content{padding:64px 0 70px}
+  .trust-grid{padding:14px 0;gap:14px 9px}
+  .intro-visual img{height:310px}
+  .experience-image img{height:300px}
+  .service-image{height:180px}
+  .home-ritual,.gallery{padding:46px 0}
+  .ritual-grid{display:flex;overflow-x:auto;gap:12px;padding:0 2px 10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .ritual-card{flex:0 0 82%;scroll-snap-align:start}
+  .ritual-card img{height:155px}
+  .ritual-card-body{padding:14px}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:135px 135px;gap:9px}
+  .booking-form{padding:20px}
+  .footer{padding:38px 0 20px}
+}
+
 </style>
 </head>
 <body>
@@ -72,9 +130,8 @@
 <div class="price-row"><div><h3>Body Polish</h3><p>Exfoliation and moisturising ritual</p></div><div class="price">₹2,000+</div></div>
 <div class="price-row"><div><h3>Couple Spa Experience</h3><p>Two-person experience, subject to availability</p></div><div class="price">₹3,000+</div></div>
 </div><div class="price-note">Price transparency note: these are proposed indicative starting prices for the website, not a verified final rate card. Please confirm actual services, session lengths and prices with Palak Nashik Spa before visiting.</div><div style="margin-top:28px"><a class="btn btn-primary" href="https://wa.me/917541946172?text=Hello%20Palak%20Nashik%20Spa%2C%20please%20share%20your%20current%20service%20menu%20and%20prices." target="_blank" rel="noopener">Get the latest menu on WhatsApp ↗</a></div></div></section>
-<section class="home-ritual" id="home-spa"><div class="container"><div class="section-head center"><div class="eyebrow">Bring the calm home</div><h2>Little rituals. Softer evenings.</h2><p>Get inspired by simple home-spa touches: warm light, fresh towels, calming scents and a few quiet minutes for yourself. This is inspiration for your own self-care routine, not a claim that home visits are offered.</p></div><div class="ritual-grid"><article class="ritual-card"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6634886/pexels-photo-6634886.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="White bathtub with bubbles in a serene bathroom, photo by Vlada Karpovich on Pexels"><div class="ritual-card-body"><h3>A quiet soak</h3><p>Let a warm bath and a few peaceful minutes become a gentle pause in your day.</p><small class="photo-credit">Photo: Vlada Karpovich / Pexels</small></div></article><article class="ritual-card"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6634886/pexels-photo-6634886.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Calm white bathtub and soft bathroom styling, photo by Vlada Karpovich on Pexels"><div class="ritual-card-body"><h3>Create your calm corner</h3><p>Soft towels, uncluttered surfaces and gentle lighting can make your space feel restful.</p><small class="photo-credit">Photo: Vlada Karpovich / Pexels</small></div></article><article class="ritual-card"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6560285/pexels-photo-6560285.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Bathtub surrounded by candles and flowers, photo by Yaroslav Shuraev on Pexels"><div class="ritual-card-body"><h3>Candlelit calm</h3><p>Warm candlelight and a simple evening ritual can help set a slower, softer mood.</p><small class="photo-credit">Photo: Yaroslav Shuraev / Pexels</small></div></article></div><div class="video-links"><a class="video-link-card" href="https://www.pexels.com/video/massaging-in-hotel-spa-12188720/" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/7233270/pexels-photo-7233270.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Preview of a massage treatment video"><div><strong>Watch a spa massage moment ↗</strong><span>Short stock video · opens on Pexels</span></div></a><a class="video-link-card" href="https://www.pexels.com/video/a-burning-candle-in-a-glass-6724994/" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Preview of candlelit spa ambience"><div><strong>Watch calming candle ambience ↗</strong><span>Short stock video · opens on Pexels</span></div></a></div><div style="text-align:center;margin-top:30px"><a class="btn btn-primary" href="https://wa.me/917541946172?text=Hello%20Palak%20Nashik%20Spa%2C%20please%20share%20your%20massage%20treatments%20and%20current%20availability." target="_blank" rel="noopener">Explore spa treatments in Nashik ↗</a></div></div></section>
-<section class="gallery" id="gallery"><div class="container"><div class="section-head center"><div class="eyebrow">A visual pause</div><h2>Inspired by calm.</h2><p>Wellness imagery to help you picture your next moment of relaxation. Explore real spa and massage stock photography from Pexels. These are illustrative visuals, not photos of the Palak Nashik Spa premises.</p></div><div class="gallery-grid"><img loading="lazy" src="https://images.pexels.com/photos/7233270/pexels-photo-7233270.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Female therapist giving a relaxing massage"><img loading="lazy" src="https://images.pexels.com/photos/5659005/pexels-photo-5659005.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Woman enjoying a spa massage treatment"><img loading="lazy" src="https://images.pexels.com/photos/7233272/pexels-photo-7233272.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Professional massage therapist working in a calm spa"><img loading="lazy" src="https://images.pexels.com/photos/19695976/pexels-photo-19695976.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Spa massage experience with professional therapists"><img loading="lazy" src="https://images.pexels.com/photos/27925502/pexels-photo-27925502.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Woman receiving a relaxing massage in a spa"><img loading="lazy" src="https://images.pexels.com/photos/7233270/pexels-photo-7233270.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Relaxing massage and wellness treatment"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6634886/pexels-photo-6634886.jpeg?auto=compress&cs=tinysrgb&w=900" alt="White bathtub with bubbles, photo by Vlada Karpovich on Pexels"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6634886/pexels-photo-6634886.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Serene bathtub setting, photo by Vlada Karpovich on Pexels"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6560285/pexels-photo-6560285.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Candlelit bathtub with flowers, photo by Yaroslav Shuraev on Pexels"></div></div></section>
-<section><div class="container"><div class="section-head center"><div class="eyebrow">A welcoming experience</div><h2>Your comfort comes first.</h2><p>We want you to feel informed and comfortable from your first enquiry to the end of your visit.</p></div><div class="reviews-grid"><article class="review-card"><div class="stars">★★★★★</div><blockquote>“A moment to slow down and make time for yourself.”</blockquote><small>Our wellness philosophy</small></article><article class="review-card"><div class="stars">✦ ✦ ✦</div><blockquote>“Tell us your preferences and we’ll help you choose.”</blockquote><small>Personalised enquiries</small></article><article class="review-card"><div class="stars">♡ ♡ ♡</div><blockquote>“Clear information before you book, every step of the way.”</blockquote><small>Our booking approach</small></article></div><p class="review-disclaimer">These are brand statements, not customer testimonials. We will only publish verified customer reviews when they are supplied or connected from an authentic public source.</p></div></section>
+<section class="home-ritual" id="home-spa"><div class="container"><div class="section-head center"><div class="eyebrow">Bring the calm home</div><h2>Little rituals. Softer evenings.</h2><p>Get inspired by simple home-spa touches: warm light, fresh towels, calming scents and a few quiet minutes for yourself. This is inspiration for your own self-care routine, not a claim that home visits are offered.</p></div><div class="ritual-grid"><article class="ritual-card"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6634886/pexels-photo-6634886.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="White bathtub with bubbles in a serene bathroom, photo by Vlada Karpovich on Pexels"><div class="ritual-card-body"><h3>A quiet soak</h3><p>Let a warm bath and a few peaceful minutes become a gentle pause in your day.</p><small class="photo-credit">Photo: Vlada Karpovich / Pexels</small></div></article><article class="ritual-card"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6683021/pexels-photo-6683021.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Candles and soft fabric create a serene spa corner, photo by Tara Winstead on Pexels"><div class="ritual-card-body"><h3>Create your calm corner</h3><p>Soft towels, uncluttered surfaces and gentle lighting can make your space feel restful.</p><small class="photo-credit">Photo: Tara Winstead / Pexels</small></div></article><article class="ritual-card"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/6620859/pexels-photo-6620859.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="White bath with lemon slices, candles and flowers, photo by Monstera Production on Pexels"><div class="ritual-card-body"><h3>Candlelit calm</h3><p>Warm candlelight and a simple evening ritual can help set a slower, softer mood.</p><small class="photo-credit">Photo: Monstera Production / Pexels</small></div></article></div><div class="video-links"><a class="video-link-card" href="https://www.pexels.com/video/massaging-in-hotel-spa-12188720/" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/7233270/pexels-photo-7233270.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Preview of a massage treatment video"><div><strong>Watch a spa massage moment ↗</strong><span>Short stock video · opens on Pexels</span></div></a><a class="video-link-card" href="https://www.pexels.com/video/a-burning-candle-in-a-glass-6724994/" target="_blank" rel="noopener noreferrer"><img loading="lazy" decoding="async" src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Preview of candlelit spa ambience"><div><strong>Watch calming candle ambience ↗</strong><span>Short stock video · opens on Pexels</span></div></a></div><div style="text-align:center;margin-top:30px"><a class="btn btn-primary" href="https://wa.me/917541946172?text=Hello%20Palak%20Nashik%20Spa%2C%20please%20share%20your%20massage%20treatments%20and%20current%20availability." target="_blank" rel="noopener">Explore spa treatments in Nashik ↗</a></div></div></section>
+<section class="gallery" id="gallery"><div class="container"><div class="section-head center"><div class="eyebrow">A visual pause</div><h2>Inspired by calm.</h2><p>Wellness imagery to help you picture your next moment of relaxation. Explore real spa and massage stock photography from Pexels. These are illustrative visuals, not photos of the Palak Nashik Spa premises.</p></div><div class="gallery-grid"><img loading="lazy" src="https://images.pexels.com/photos/7233270/pexels-photo-7233270.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Female therapist giving a relaxing massage"><img loading="lazy" src="https://images.pexels.com/photos/5659005/pexels-photo-5659005.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Woman enjoying a spa massage treatment"><img loading="lazy" src="https://images.pexels.com/photos/7233272/pexels-photo-7233272.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Professional massage therapist working in a calm spa"><img loading="lazy" src="https://images.pexels.com/photos/19695976/pexels-photo-19695976.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Spa massage experience with professional therapists"></div></div></section>
 <section id="faq"><div class="container faq-grid"><div><div class="eyebrow">Good to know</div><h2>Questions, answered.</h2><p>Not sure where to start? Send us a message and we’ll help with the details before you book.</p><a class="text-link" href="https://wa.me/917541946172" target="_blank" rel="noopener">Ask us on WhatsApp ↗</a></div><div>
 <div class="faq-item active"><button class="faq-question" aria-expanded="true"><span>How do I book an appointment?</span><span>−</span></button><div class="faq-answer"><p>Use the WhatsApp buttons on this website or call +91 75419 46172. Your appointment is confirmed only after the team replies and confirms availability.</p></div></div>
 <div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How much do treatments cost?</span><span>＋</span></button><div class="faq-answer"><p>Indicative starting prices are shown in the pricing section. The final amount depends on the selected treatment and session length; please confirm the current rate with us before booking.</p></div></div>
