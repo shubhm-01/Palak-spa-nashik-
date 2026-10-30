@@ -110,7 +110,7 @@ section{padding:64px 0}
 .home-shop-actions{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
 .home-shop .btn-outline{background:transparent;border:1px solid var(--forest);color:var(--forest)}
 .shop-marquee-wrap{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;cursor:grab;padding:4px 2px 17px;overscroll-behavior-x:contain}
-.shop-marquee-wrap:active{cursor:grabbing}
+.shop-marquee-wrap:active{cursor:grabbing}.shop-marquee-wrap.is-dragging .shop-marquee{animation-play-state:paused}
 .shop-marquee{display:flex;gap:17px;width:max-content;animation:shop-drift 92s linear infinite;will-change:transform}
 .shop-marquee-wrap:hover .shop-marquee,.shop-marquee-wrap:focus-within .shop-marquee{animation-play-state:paused}
 .shop-marquee .catalog-card{flex:0 0 245px;width:245px;scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(24,52,42,.08)}
@@ -121,7 +121,7 @@ section{padding:64px 0}
 .shop-marquee .catalog-price{font-weight:700;color:var(--forest);margin:0 0 12px}
 .shop-marquee .btn{width:100%;text-align:center;padding:11px 13px;font-size:.84rem}
 .shop-scroll-hint{font-size:.8rem;color:var(--muted);margin-top:5px;text-align:right}
-@keyframes shop-drift{0%{transform:translateX(0)}100%{transform:translateX(-18%)}}
+@keyframes shop-drift{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @media(max-width:700px){
  .home-shop{padding:48px 0 52px}
  .home-shop-head{display:block}
@@ -206,10 +206,11 @@ const modal=document.getElementById('video-modal'),video=document.getElementById
  const rail=document.querySelector('.shop-marquee-wrap');
  const track=document.querySelector('.shop-marquee');
  if(rail&&track){
+   if(!track.dataset.loopReady){const copy=track.cloneNode(true);copy.removeAttribute('id');copy.setAttribute('aria-hidden','true');copy.querySelectorAll('a,button').forEach(a=>a.setAttribute('tabindex','-1'));while(copy.firstElementChild)track.appendChild(copy.firstElementChild);track.dataset.loopReady='true';}
    let down=false,startX=0,scrollLeft=0;
-   rail.addEventListener('pointerdown',e=>{down=true;startX=e.clientX;scrollLeft=rail.scrollLeft;rail.setPointerCapture?.(e.pointerId);});
+   rail.addEventListener('pointerdown',e=>{down=true;rail.classList.add('is-dragging');startX=e.clientX;scrollLeft=rail.scrollLeft;rail.setPointerCapture?.(e.pointerId);});
    rail.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-startX;rail.scrollLeft=scrollLeft-dx;});
-   ['pointerup','pointercancel','lostpointercapture'].forEach(ev=>rail.addEventListener(ev,()=>{down=false;}));
+   ['pointerup','pointercancel','lostpointercapture'].forEach(ev=>rail.addEventListener(ev,()=>{down=false;rail.classList.remove('is-dragging');}));
    rail.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){rail.scrollLeft+=e.deltaY;e.preventDefault();}},{passive:false});
  }
 })();
